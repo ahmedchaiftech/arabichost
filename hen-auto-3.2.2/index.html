@@ -390,13 +390,14 @@ function listener()
 function triggerX()
 {
 	setTimeout(trigger,50,jump_1_addr);
-	setTimeout(showMsg,2000,"<h2><span style='color:red'>Fallo al instalar. Cierra el navegador y vuelve a intentarlo.</span></h2>");
+	setTimeout(showMsg,2000,"<h2><span style='color:red'>
+Échec de l'installation. Fermez le navigateur et réessayez.</span></h2>");
 	t_out=0;
 	total_loops=0;
 }
 function HFWmsg()
 {
-	showMsg("<h2><span style='color:red'>Debes tener instalado el (HFW) 4.90 antes de usar esto!</h2></span>");
+	showMsg("<h2><span style='color:red'>Vous devez avoir installé (HFW) 4.90 avant de l'utiliser !!</h2></span>");
 	throw new Error('');
 }
 if(fwv=="4.90"){initROP(true)}else{HFWmsg()}
